@@ -2,7 +2,7 @@
 
 ### INXHINIERI e WEB-it (Projekt)
 
-Ky është Faza e Parë e Projektit në lëndën "Inxhinieri e Web-it" me Profesorin Ramiz Hoxha dhe asistent Blerina Rrmoku.
+- Ky është Faza e Parë e Projektit në lëndën "Inxhinieri e Web-it" tek Profesori Ramiz Hoxha dhe asistent Blerina Rrmoku.
 
 
 
