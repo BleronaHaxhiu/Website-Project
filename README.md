@@ -7,5 +7,5 @@
 
 
 #### Student
-- Blerona Haxhiu
-- Blendion Krasniqi
+Blerona Haxhiu
+Blendion Krasniqi
