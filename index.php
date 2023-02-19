@@ -16,12 +16,13 @@
                 </a>
             </div>
             <nav>
-                <ul>
+                <ul id="MenuItems">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="login.html">Log In/Register</a></li>
+                    <img src="./images/menu-icon.png" class="menu-icon" onclick="menutoggle()">
                 </ul>
             </nav>
         </div>
@@ -32,6 +33,8 @@
             </div>
             <div class="col2">
                 <img src="./images/png.png">
+                <!-- <img src="" id="imazhi"> 
+                <script src="Js/slider.js"></script> -->
             </div>
         </div>
     </div>
@@ -104,5 +107,24 @@
         </div>
     </div>
 
+    <!-- ------ js for toggle menu ------------ -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else{
+                    MenuItems.style.maxHeight = "0px";
+                }
+        }
+
+    </script>
+
+    <!-- <script src="Js/slider.js"></script> -->
 </body>
 </html>
