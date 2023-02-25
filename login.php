@@ -14,14 +14,14 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html"><img src="./images/logo2.png" width="120px"></a>
+                    <a href="index.php"><img src="./images/logo2.png" width="120px"></a>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="about.php">About Us</a></li>
                         <li><a href="">Log In/Register</a></li>
                     </ul>
                 </nav>

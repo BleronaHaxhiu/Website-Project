@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +13,16 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="./images/logo2.png" width="120px"></a>
+                <a href="index.php"><img src="./images/logo2.png" width="120px"></a>
                 </a>
             </div>
             <nav>
                 <ul id="MenuItems">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="login.html">Log In/Register</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="products.php">Products</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="login.php">Log In/Register</a></li>
                     <img src="./images/menu-icon.png" class="menu-icon" onclick="menutoggle()">
                 </ul>
             </nav>
@@ -29,12 +30,12 @@
         <div class="row">
             <div class="col2">
                 <h1>With Every Newborn Baby<br> A Sun Rises!</h1>
-                <a href="products.html" class="btn">Explore Now &#8594;</a>
+                <a href="products.php" class="btn">Explore Now &#8594;</a>
             </div>
             <div class="col2">
-                <img src="./images/png.png">
-                <!-- <img src="" id="imazhi"> 
-                <script src="Js/slider.js"></script> -->
+                <!-- <img src="./images/png.png"> -->
+                <!-- <img src="" id="imazhi">  -->
+                <script src="Js/slider.js"></script>
             </div>
         </div>
     </div>
@@ -46,18 +47,18 @@
         <h2>Latest Products</h2>
         <div class="row">
             <div class="col-3">
-                <a href="login.html"><img src="./images/c1.jpeg"></a>
-                <a href="login.html"><h4>Faux Shearling Overall</h4></a>
+                <a href="login.php"><img src="./images/c1.jpeg"></a>
+                <a href="login.php"><h4>Faux Shearling Overall</h4></a>
                 <p>€ 15.00</p>
             </div>
             <div class="col-2">
-                <a href="login.html"><img src="./images/c2.jpeg"></a>
-                <a href="login.html"><h4>3-piece Cotton Set</h4></a>
+                <a href="login.php"><img src="./images/c2.jpeg"></a>
+                <a href="login.php"><h4>3-piece Cotton Set</h4></a>
                 <p>€ 9.99</p>
             </div>
             <div class="col-1">
-                <a href="login.html"><img src="./images/c3.jpeg"></a>
-                <a href="login.html"><h4>3-pack Terry Socks</h4></a>
+                <a href="login.php"><img src="./images/c3.jpeg"></a>
+                <a href="login.php"><h4>3-pack Terry Socks</h4></a>
                 <p>€ 8.99</p>
             </div>
         </div>

@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,15 +15,15 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html"><img src="./images/logo2.png" width="120px"></a>
+                    <a href="index.php"><img src="./images/logo2.png" width="120px"></a>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="login.html">Log In/Register</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="login.php">Log In/Register</a></li>
                     </ul>
                 </nav>
             </div>
@@ -41,22 +42,22 @@
             </div>
             <div class="row">
                 <div class="col-3">
-                    <a href="login.html"><img src="./images/c1.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"><img src="./images/c1.jpeg"></a>
+                    <a href="login.php">
                         <h4>Faux Shearling Overall</h4>
                     </a>
                     <p>€ 15.00</p>
                 </div>
                 <div class="col-2">
-                    <a href="login.html"><img src="./images/c2.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"><img src="./images/c2.jpeg"></a>
+                    <a href="login.php">
                         <h4>3-piece Cotton Set</h4>
                     </a>
                     <p>€ 9.99</p>
                 </div>
                 <div class="col-1">
-                    <a href="login.html"><img src="./images/c3.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"><img src="./images/c3.jpeg"></a>
+                    <a href="login.php">
                         <h4>3-pack Terry Socks</h4>
                     </a>
                     <p>€ 8.99</p>
@@ -64,22 +65,22 @@
             </div>
             <div class="row">
                 <div class="col-3">
-                    <a href="login.html"> <img src="./images/c4.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c4.jpeg"></a>
+                    <a href="login.php">
                         <h4>5-pack Wrapover Bodysuits</h4>
                     </a>
                     <p>€ 29.99</p>
                 </div>
                 <div class="col-2">
-                    <a href="login.html"> <img src="./images/c5.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c5.jpeg"></a>
+                    <a href="login.php">
                         <h4>Rib-knit Sweater</h4>
                     </a>
                     <p>€ 19.99</p>
                 </div>
                 <div class="col-1">
-                    <a href="login.html"> <img src="./images/c6.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c6.jpeg"></a>
+                    <a href="login.php">
                         <h4>2-piece Bodysuit and Shorts Set</h4>
                     </a>
                     <p>€ 12.75</p>
@@ -87,22 +88,22 @@
             </div>
             <div class="row">
                 <div class="col-3">
-                    <a href="login.html"> <img src="./images/c7.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c7.jpeg"></a>
+                    <a href="login.php">
                         <h4>Top and Pants</h4>
                     </a>
                     <p>€ 29.74</p>
                 </div>
                 <div class="col-2">
-                    <a href="login.html"> <img src="./images/c8.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c8.jpeg"></a>
+                    <a href="login.php">
                         <h4>3-piece Cotton Set</h4>
                     </a>
                     <p>€ 8.49</p>
                 </div>
                 <div class="col-1">
-                    <a href="login.html"> <img src="./images/c9.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c9.jpeg"></a>
+                    <a href="login.php">
                         <h4>Tulle-skirt bodysuit dress</h4>
                     </a>
                     <p>€ 14.99</p>
@@ -111,22 +112,22 @@
             </div>
             <div class="row">
                 <div class="col-3">
-                    <a href="login.html"> <img src="./images/c10.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c10.jpeg"></a>
+                    <a href="login.php">
                         <h4>Slip-on Shoes</h4>
                     </a>
                     <p>€ 6.99</p>
                 </div>
                 <div class="col-2">
-                    <a href="login.html"> <img src="./images/c12.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c12.jpeg"></a>
+                    <a href="login.php">
                         <h4>Shirt and Bow Tie</h4>
                     </a>
                     <p>€ 13.39</p>
                 </div>
                 <div class="col-1">
-                    <a href="login.html"> <img src="./images/c11.jpeg"></a>
-                    <a href="login.html">
+                    <a href="login.php"> <img src="./images/c11.jpeg"></a>
+                    <a href="login.php">
                         <h4>Soft Teddy Fabric Slippers</h4>
                     </a>
                     <p>€ 8.75</p>
@@ -135,8 +136,8 @@
 
             <div class="page-btn">
                 <span>1</span>
-                <a href="products-page2.html"><span>2 </span></a>
-                <a href="products-page2.html"><span>&#8594;</span></a>
+                <a href="products-page2.php"><span>2 </span></a>
+                <a href="products-page2.php"><span>&#8594;</span></a>
             </div>
 
 
