@@ -45,21 +45,21 @@
                             <span onclick="register()">Register</span>
                             <hr id="indicator">
                         </div>
-                        <form id="LoginForm">
-                            <input type="email" placeholder="Email" id="email">
-                            <input type="password" placeholder="Password" id="password">
+                        <form id="LoginForm" action="./Php/login.php" method="post">
+                            <input type="email" placeholder="Email" name="email "id="email" >
+                            <input type="password" placeholder="Password" name="password" id="password">
                             <p class="error">!</p>
-                            <button type="button" class="btn" id="submit">Login</button>
+                            <button type="submit" class="btn" id="submit">Login</button>
                             <a href="">Forgot password</a>
                         </form>
 
-                        <form id="RegisterForm">
-                            <input type="text" placeholder="Username" id="username">
-                            <input type="email" placeholder="Email" id="email2">
-                            <input type="password" placeholder="Password" id="password2">
+                        <form id="RegisterForm" action="./Php/registerUser.php" method="post">
+                            <input type="text" placeholder="Username" name="username" id="username">
+                            <input type="email" placeholder="Email" name="email" id="email2">
+                            <input type="password" placeholder="Password" name="password" id="password2">
                             <p class="error2"></p>
 
-                            <button type="button" class="btn" id="submit2">Register</button>
+                            <button type="submit" class="btn" id="submit2">Register</button>
                         </form>
                     </div>
                 </div>

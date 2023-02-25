@@ -29,13 +29,20 @@
         </div>
         <div class="row">
             <div class="col2">
-                <h1>With Every Newborn Baby<br> A Sun Rises!</h1>
+                <h1>With Every blblbl Baby<br> A Sun Rises!</h1>
                 <a href="products.php" class="btn">Explore Now &#8594;</a>
             </div>
             <div class="col2">
                 <!-- <img src="./images/png.png"> -->
-                <!-- <img src="" id="imazhi">  -->
-                <script src="Js/slider.js"></script>
+
+                <!-- <img class="col2" id="imazhi" src="" alt=""> -->
+                <img id="imazhi" src=""> 
+                <!-- <script src="Js/slider.js"></script> -->
+                <!-- <img id="imazhi" src=""> -->
+                <!-- <script>
+                    krijoSlider();
+                </script> -->
+
             </div>
         </div>
     </div>
@@ -108,6 +115,9 @@
         </div>
     </div>
 
+    <script src="Js/slider.js"></script>
+
+    
     <!-- ------ js for toggle menu ------------ -->
     <script>
         var MenuItems = document.getElementById("MenuItems");
@@ -123,9 +133,7 @@
                     MenuItems.style.maxHeight = "0px";
                 }
         }
-
     </script>
 
-    <!-- <script src="Js/slider.js"></script> -->
 </body>
 </html>

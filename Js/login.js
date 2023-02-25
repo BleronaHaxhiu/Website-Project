@@ -32,12 +32,7 @@ function validate() {
         return true;
     }
 }
-function isValid(){
-    if (validate()){
-        window.location.href = "index.html"
-    }
-}
-submit.addEventListener("click", isValid)
+submit.addEventListener("click", validate)
 
 
 
@@ -60,9 +55,5 @@ function validate2() {
         return true;
     }
 }
-function isValid2(){
-    if (validate2()){
-        window.location.href = "index.html"
-    }
-}
-submit2.addEventListener("click", isValid2)
+
+submit2.addEventListener("click", validate2)
