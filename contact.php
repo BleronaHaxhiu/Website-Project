@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,21 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <?php
+    // include 'Components/navbar.php';
+    include("./Php/ContactCrudModel.php");
+    if (isset($_POST['submit'])) {
+        $contactModel = new ContactCrudModel();
+        $contactModel->setName($_POST['name']);
+        $contactModel->setEmail($_POST['email']);
+        $contactModel->setMessage($_POST['message']);
+
+        $contactModel->insert();
+    }
+    ?>
+
     <div class="header">
         <div class="container">
             <div class="navbar">
@@ -24,7 +39,7 @@
                     </ul>
                 </nav>
             </div>
-    
+
         </div>
     </div>
     <div class="contact">
@@ -32,7 +47,7 @@
             <h3>GET IN TOUCH</h3>
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Email" required>
-            <input type="text" id="phone" placeholder="Phone Number" required>
+            <!-- <input type="text" id="phone" placeholder="Phone Number" required> -->
             <textarea id="message" rows="4" placeholder="How Can We Help You?"></textarea>
             <button type="submit">Send Message</button>
         </form>
@@ -57,44 +72,45 @@
         //             }
     </script>
 
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col-1">
-                <h3>Download Our App</h3>
-                <p>Download App for Android and IOS mobile phone.</p>
-                <div class="app-logo">
-                    <img src="./images/playstore.png" width="100px">
-                    <img src="./images/appstore.png" width="100px">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and IOS mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="./images/playstore.png" width="100px">
+                        <img src="./images/appstore.png" width="100px">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="./images/logo2.png" width="150px">
+                    <p>Being created for the kids, the items from these shops correspond to the <br>highest quality standards
+                        and are marked with the pleasant to eyes look.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-col-2">
-                <img src="./images/logo2.png" width="150px">
-                <p>Being created for the kids, the items from these shops correspond to the <br>highest quality standards 
-                    and are marked with the pleasant to eyes look.</p>
-            </div>
-            <div class="footer-col-3">
-                <h3>Useful Links</h3>
-               <ul>
-                    <li>Coupons</li>
-                    <li>Blog Post</li>
-                    <li>Return Policy</li>
-                    <li>Join Affiliate</li>
-               </ul>
-            </div>
-            <div class="footer-col-4">
-                <h3>Follow Us</h3>
-               <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>YouTube</li>
-               </ul>
-            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Sweet Little Babies Store</p>
         </div>
-        <hr>
-        <p class="copyright">Copyright 2022 - Sweet Little Babies Store</p>
     </div>
-</div>
 </body>
+
 </html>

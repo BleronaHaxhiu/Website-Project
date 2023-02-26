@@ -29,7 +29,7 @@
         </div>
         <div class="row">
             <div class="col2">
-                <h1>With Every Baby<br> A Sun Rises!</h1>
+                <h1>With Every Baby A New<br> A Sun Rises!</h1>
                 <a href="products.php" class="btn">Explore Now &#8594;</a>
             </div>
             <div class="col2">

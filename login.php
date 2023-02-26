@@ -31,7 +31,7 @@
     </div>
 
     <?php
-    require_once("./Php/userCrudModel.php");
+    require_once("./Php/userCrudmodel.php");
     if (isset($_POST['submit'])) {
         // $emailRegex = '/^[A-Za-z0-9]+@[a-zA-z-]+\.com|net|edu$/';
         // $passwordRegex = '/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\.\!\?\@\#\$\%\&])(?=.{6,20})/';
@@ -55,7 +55,7 @@
         // }
     }
 
-    require_once("./Php/userCrudModel.php");
+    require_once("./Php/userCrudmodel.php");
     if (isset($_POST['submit2'])) {
 
         $userModel = new UserCrudModel();
