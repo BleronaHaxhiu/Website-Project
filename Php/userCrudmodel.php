@@ -7,22 +7,19 @@ class UserCrudModel extends DbConnection
 {
     private $id;
     private $name;
-    private $surname;
     private $email;
     private $password;
     private $role;
 
     private $dbConn;
 
-    public function __construct($id = '', $name = '', $surname = '', $age = '', $address = '', $email = '', $confirmEmail = '',  $password = '', $role = '', $createdBy = '')
+    public function __construct($id = '', $name = '', $email = '',$password = '', $role = '')
     {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
-        $this->confirmEmail = $confirmEmail;
         $this->password = $password;
         $this->role = $role;
-        $this->createdBy = $createdBy;
 
         $this->dbConn = $this->connect();
     }
@@ -45,26 +42,6 @@ class UserCrudModel extends DbConnection
     {
         return $this->name;
     }
-    public function setSurname($surname)
-    {
-        $this->surname = $surname;
-    }
-
-    public function getSurname()
-    {
-        return $this->surname;
-    }
-
-    public function setAge($age)
-    {
-        $this->age = $age;
-    }
-
-    public function getAge()
-    {
-        return $this->age;
-    }
-
     public function setEmail($email)
     {
         $this->email = $email;
@@ -73,16 +50,6 @@ class UserCrudModel extends DbConnection
     public function getEmail()
     {
         return $this->email;
-    }
-
-    public function setConfirmEmail($confirmEmail)
-    {
-        $this->confirmEmail = $confirmEmail;
-    }
-
-    public function getConfirmEmail()
-    {
-        return $this->confirmEmail;
     }
 
     public function setPassword($password)
@@ -94,16 +61,6 @@ class UserCrudModel extends DbConnection
     {
         return $this->password;
     }
-    public function setAddress($address)
-    {
-        $this->address = $address;
-    }
-
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
     public function setRole($role)
     {
         $this->role = $role;
@@ -112,16 +69,6 @@ class UserCrudModel extends DbConnection
     public function getRole()
     {
         return $this->role;
-    }
-
-    public function setCreatedBy($createdBy)
-    {
-        $this->createdBy = $createdBy;
-    }
-
-    public function getCreatedBy()
-    {
-        return $this->createdBy;
     }
 
 
@@ -143,14 +90,14 @@ class UserCrudModel extends DbConnection
         }
     }
     public function insert()
-    {
+    { 
         try {
-            $exists = $this->checkIfEmailExists();
-            if ($exists) {
-                echo "<script>alert('A user with this email already exists!')</script>";
-                echo "<script>window.location.href = '../login.php';</script>";
-                return;
-            }
+            // $exists = $this->checkIfEmailExists();
+            // if ($exists) {
+            //     echo "<script>alert('A user with this email already exists!')</script>";
+            //     echo "<script>window.location.href = '../login.php';</script>";
+            //     return;
+            // }
             $query = "INSERT INTO users(name, email, password, role) VALUES('$this->name', '$this->email', '$this->password', 'user')";
             if ($sql = $this->dbConn->query($query)) {
                 echo "<script>alert('You're registered successfully!');</script>";
@@ -164,27 +111,27 @@ class UserCrudModel extends DbConnection
         }
     }
 
-    public function insertByAdmin()
-    {
-        try {
-            $exists = $this->checkIfEmailExists();
-            if ($exists) {
-                echo "<script>alert('A user with this email already exists!')</script>";
-                echo "<script>window.location.href = ../User/addUser.php';</script>";
-                return;
-            }
-            $query = "INSERT INTO users(name, surname, age, address, email, password, role, dateCreated, createdBy) VALUES('$this->name', '$this->surname', '$this->age', '$this->address', '$this->email', '$this->password', '$this->role', NOW(), '$this->createdBy')";
-            if ($sql = $this->dbConn->query($query)) {
-                echo "<script>alert('User is added successfully!');</script>";
-                echo "<script>window.location.href = '../User/UsersDashboard.php';</script>";
-            } else {
-                echo "<script>alert('Registration failed!');</script>";
-                echo "<script>window.location.href = '../User/addUser.php';</script>";
-            }
-        } catch (Exception $ex) {
-            return $ex->getMessage();
-        }
-    }
+    // public function insertByAdmin()
+    // {
+    //     try {
+    //         $exists = $this->checkIfEmailExists();
+    //         if ($exists) {
+    //             echo "<script>alert('A user with this email already exists!')</script>";
+    //             echo "<script>window.location.href = ../User/addUser.php';</script>";
+    //             return;
+    //         }
+    //         $query = "INSERT INTO users(name, surname, age, address, email, password, role, dateCreated, createdBy) VALUES('$this->name', '$this->surname', '$this->age', '$this->address', '$this->email', '$this->password', '$this->role', NOW(), '$this->createdBy')";
+    //         if ($sql = $this->dbConn->query($query)) {
+    //             echo "<script>alert('User is added successfully!');</script>";
+    //             echo "<script>window.location.href = '../User/UsersDashboard.php';</script>";
+    //         } else {
+    //             echo "<script>alert('Registration failed!');</script>";
+    //             echo "<script>window.location.href = '../User/addUser.php';</script>";
+    //         }
+    //     } catch (Exception $ex) {
+    //         return $ex->getMessage();
+    //     }
+    // }
 
 
     public function getAll()
@@ -248,14 +195,15 @@ class UserCrudModel extends DbConnection
                         $_SESSION['adminEmail'] = $this->email;
                     }
                     echo "<script>alert('The login was successful!');</script>";
-                    echo "<script>window.location.href = '../index.php';</script>";
+                    echo "<script>window.location.href = './index.php';</script>";
+    
                 } else {
                     echo "<script>alert('The password is incorrect!');</script>";
-                    echo "<script>window.location.href = '../login.php';</script>";
+                    echo "<script>window.location.href = './login.php';</script>";
                 }
             } else {
                 echo "<script>alert(`This email doesn't exist`);</script>";
-                echo "<script>window.location.href = '../login.php';</script>";
+                echo "<script>window.location.href = './login.php';</script>";
             }
         } catch (Exception $ex) {
             return $ex->getMessage();

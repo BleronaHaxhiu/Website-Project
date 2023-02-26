@@ -30,6 +30,50 @@
         </div>
     </div>
 
+    <?php
+    require_once("./Php/userCrudModel.php");
+    if (isset($_POST['submit'])) {
+        // $emailRegex = '/^[A-Za-z0-9]+@[a-zA-z-]+\.com|net|edu$/';
+        // $passwordRegex = '/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\.\!\?\@\#\$\%\&])(?=.{6,20})/';
+
+        // if (!preg_match($emailRegex, $_POST['email'])) {
+        //     $errors[] = "Please provide a valid email!";
+        // }
+
+        // if (!preg_match($passwordRegex, $_POST['password'])) {
+        //     $errors[] = "Please provide a password with 6+ chars, including upper, lowercase and special chars!";
+        // }
+
+        // if (empty($errors)) {
+        $userModel = new UserCrudModel();
+        $userModel->setEmail($_POST['email']);
+        $userModel->setPassword($_POST['password']);
+        $userModel->login();
+        // } else {
+        //     echo "<script>alert('Please provide valid email and password!');</script>";
+        //     echo "<script>window.location.href = '../login.php';</script>";
+        // }
+    }
+
+    require_once("./Php/userCrudModel.php");
+    if (isset($_POST['submit2'])) {
+
+        $userModel = new UserCrudModel();
+        $userModel->setName($_POST['username']);
+        $userModel->setEmail($_POST['email']);
+        $userModel->setPassword($_POST['password']);
+        $userModel->setRole('user');
+        $name = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+
+        $userModel->insert();
+    }
+
+
+    ?>
+
     <!-- ------account------------- -->
 
     <div class="account-page">
@@ -45,21 +89,21 @@
                             <span onclick="register()">Register</span>
                             <hr id="indicator">
                         </div>
-                        <form id="LoginForm" action="./Php/login.php" method="post">
-                            <input type="email" placeholder="Email" name="email "id="email" >
+                        <form id="LoginForm" method="post">
+                            <input type="email" placeholder="Email" name="email" id="email">
                             <input type="password" placeholder="Password" name="password" id="password">
                             <p class="error">!</p>
-                            <button type="submit" class="btn" id="submit">Login</button>
+                            <button type="submit" class="btn" id="submit" name="submit">Login</button>
                             <a href="">Forgot password</a>
                         </form>
 
-                        <form id="RegisterForm" action="./Php/registerUser.php" method="post">
+                        <form id="RegisterForm" method="post">
                             <input type="text" placeholder="Username" name="username" id="username">
                             <input type="email" placeholder="Email" name="email" id="email2">
                             <input type="password" placeholder="Password" name="password" id="password2">
                             <p class="error2"></p>
 
-                            <button type="submit" class="btn" id="submit2">Register</button>
+                            <button type="submit" class="btn" name="submit2" id="submit2">Register</button>
                         </form>
                     </div>
                 </div>
